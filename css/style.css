@@ -1014,11 +1014,9 @@ body.ie ._ibg img {
 }
 
 ._no-webp .header{
-  background: #fff url(../img/header/header-bg.jpg)  50% 0 no-repeat; }
+  background: #fff url(../img/header/header-bg.jpg) 50% 0 no-repeat; }
 
 .header {
-  background-repeat: no-repeat;
-  background-position: top;
   position: fixed;
   top: 0;
   left: 0;
