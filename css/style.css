@@ -5242,7 +5242,7 @@ body.ie ._ibg img {
 
 ._webp .select__value:before{ background: url(../img/icons/select-arrow-down.webp) center/100% no-repeat; }
 
-._webp .header{ background: #fff url(../img/header/header-bg.webp); }
+._webp .header{ background: #fff url(../img/header/header-bg.webp) 50% 0 no-repeat; }
 
 ._webp .contacts-header__item_icon{ background: url(../img/header/phone.webp) left no-repeat; }
 
