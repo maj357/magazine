@@ -1014,7 +1014,7 @@ body.ie ._ibg img {
 }
 
 ._no-webp .header{
-  background: #fff url(../img/header/header-bg.jpg); }
+  background: #fff url(../img/header/header-bg.jpg)  50% 0 no-repeat; }
 
 .header {
   background-repeat: no-repeat;
