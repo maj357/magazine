@@ -1800,7 +1800,7 @@ if (isMobile.any()) {
 	}
 }
 
-//Плавный сворачивание в слайд меню
+// Плавное сворачивание в слайд меню
 let menuPageBurger = document.querySelector('.menu-page__burger');
 let menuPageBody = document.querySelector('.menu-page__body');
 menuPageBurger.addEventListener("click", function (e) {
@@ -1809,7 +1809,7 @@ menuPageBurger.addEventListener("click", function (e) {
 	_slideToggle(menuPageBody);
 });
 
-//Плавный сворачивание в слайд выбора категорий поиска
+// Плавное сворачивание в слайд выбора категорий поиска
 let searchSelect = document.querySelector('.search-page__title');
 let categoriesSearch = document.querySelector('.categories-search');
 searchSelect.addEventListener("click", function (e) {
@@ -1838,34 +1838,37 @@ for (let index = 0; index < checkBoxCategories.length; index++) {
 	});
 }
 
-// Подключаем плагин фильтра
-const priceFilter = document.querySelector('.price-filter__slider');
-
-noUiSlider.create(priceFilter, {
-	start: [1250, 75000],
-	connect: true,
-	tooltips: [wNumb({ decimals: 0 }), wNumb({ decimals: 0 })],
-	range: {
-		'min': [0],
-		'max': [100000]
-	}
-});
-
 // При клике на обьект передается значение в фильтр-ползунок 
 const priceStart = document.getElementById('price-start');
-const priceEnd = document.getElementById('price-max');
+const priceEnd = document.getElementById('price-end');
 priceStart.addEventListener("change", setPriceValues);
 priceEnd.addEventListener("change", setPriceValues);
 
 function setPriceValues() {
-
 	if (priceStart.value != '') {
 		priceStartValue = priceStart.value;
+		priceEndValue = priceEnd.value;
 	}
 	if (priceEnd.value != '') {
 		priceEndValue = priceEnd.value;
+		priceStartValue = priceStart.value;
 	}
-	priceFilter.noUiSlider.set([priceStartvalue, priceEndvalue]);
+	priceSlider.noUiSlider.set([priceStartValue, priceEndValue]);
+}
+
+// Подключаем плагин фильтра
+const priceSlider = document.querySelector('.price-filter__slider');
+if (priceSlider) {
+
+	noUiSlider.create(priceSlider, {
+		start: [1250, 75000],
+		connect: true,
+		tooltips: [wNumb({ decimals: 0 }), wNumb({ decimals: 0 })],
+		range: {
+			'min': [0],
+			'max': [100000]
+		}
+	});
 }
 let scr_body = document.querySelector('body');
 let scr_blocks = document.querySelectorAll('._scr-sector');
