@@ -4274,7 +4274,7 @@ body.ie ._ibg img {
   }
 
   .info-header__schedule {
-    background: none;
+    background-image: none;
     padding: 0;
   }
 
@@ -4667,19 +4667,19 @@ body.ie ._ibg img {
   }
 
   .actions-header__item_login {
-    background: none;
+    background-image: none;
   }
 
   .actions-header__item_reg {
-    background: none;
+    background-image: none;
   }
 
   .actions-header__item_mail {
-    background: none;
+    background-image: none;
   }
 
   .info-header__callback {
-    background: none;
+    background-image: none;
     padding: 0;
   }
 
@@ -5067,7 +5067,7 @@ body.ie ._ibg img {
 @media (max-width: 485px) {
   .contacts-header__item_icon {
     padding: 0;
-    background: none;
+    background-image: none;
   }
 
   .contacts-header__label {
